@@ -1,0 +1,13 @@
+version: 0.2
+
+phases:
+  build:
+    commands:
+      - echo Build started on `date`
+      - npm install
+      - npm run build
+      - echo Syncing data to $WEB_REPORTS_BUCKET S3 bucket
+      - aws s3 sync build/ s3://$WEB_REPORTS_BUCKET/ --delete
+  post_build:
+    commands:
+      - echo Build completed on `date`

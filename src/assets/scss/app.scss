@@ -1,0 +1,249 @@
+@import "utils/variables";
+@import "utils/mixins";
+@import "base/reset";
+@import "base/typography";
+
+// Customized Spacing Style
+
+.col-md-6 {
+  padding: 0 20px;
+}
+.col-md-3 {
+  padding: 0 20px;
+  @include mq("desktop-xwide") {
+    padding: 0 70px;
+  }
+}
+.w-90 {
+  width: 90%;
+}
+.custom-width {
+  width: 99px;
+  @include mq("desktop-xwide") {
+    width: 120px;
+  }
+}
+h2 {
+  margin-top: get-vw(85);
+}
+h3 {
+  margin-top: get-vw(25);
+  margin-bottom: get-vw(20);
+  margin-right: get-vw(23);
+}
+
+// Customized Table Style
+
+.table {
+  th,
+  td {
+    border-top: none;
+  }
+  thead {
+    th {
+      border-bottom: none;
+    }
+  }
+  border-bottom: none;
+}
+table {
+  th {
+    font-size: 17px;
+    font-weight: 600;
+    border-bottom: none;
+    @include mq("desktop-xwide") {
+      font-size: 32px;
+    }
+  }
+  thead {
+    background-color: #f4f4f4;
+  }
+}
+.tbody-back1 {
+  background-color: rgba(#3384af, 0.09);
+}
+.tbody-back2 {
+  background-color: rgba(#dea831, 0.09);
+}
+.tbody-back3 {
+  background-color: rgba(#47c70e, 0.09);
+}
+
+// Footer Sytle
+
+footer {
+  margin-top: get-vw(100);
+  .logo {
+    width: 123px;
+    height: 35px;
+    @include mq("desktop-xwide") {
+      width: 184px;
+      height: 55px;
+    }
+  }
+  .logo-text {
+    margin-right: get-vw(18);
+    color: #09095b;
+    font-size: clamp(10px, 16 / 2480 * 100vw, 16px);
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.25;
+    letter-spacing: normal;
+    text-align: right;
+  }
+  .footer-text {
+    font-family: "Roboto", sans-serif;
+    width: 850px;
+    font-size: 15px;
+    margin: 15px;
+    color: #323232;
+    @include mq("desktop-xwide") {
+      font-size: 26px;
+      width: 1339px;
+      margin: 30px;
+    }
+  }
+  .exclamation {
+    position: relative;
+    color: #3384af;
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    border: solid 4px #3384af;
+    &::before {
+      content: "i";
+      position: absolute;
+      font-size: 33px;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+    @include mq("desktop-xwide") {
+      width: 78.6px;
+      height: 78.6px;
+      border: solid 6px #3384af;
+      &:before {
+        font-size: 50px;
+      }
+    }
+  }
+}
+
+// Others
+
+.reportLogo {
+  width: 210px;
+  height: 35px;
+  @include mq("desktop-xwide") {
+    width: 498px;
+    height: 57px;
+  }
+}
+.card {
+  width: 400px;
+  margin: 0 auto;
+  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+}
+.font-size {
+  font-size: 17px;
+  @include mq("desktop-xwide") {
+    font-size: 28px;
+  }
+}
+.border-line {
+  padding-bottom: 30px;
+  border-bottom: 2px solid #f4f4f4;
+  @include mq("desktop-xwide") {
+    padding-bottom: 70px;
+    border-bottom: 3px solid #f4f4f4;
+  }
+}
+section {
+  margin-top: 85px;
+  @include mq("phone") {
+    margin-top: 35px;
+  }
+}
+.label-top {
+  color: #f22736;
+  font-size: clamp(16px, 30/2480 * 100vw, 30px);
+  text-align: center;
+  transform: translateY(-9px);
+}
+.label-bottom {
+  color: #f22736;
+  font-size: clamp(16px, 30/2480 * 100vw, 30px);
+  text-align: center;
+  transform: translateY(9px);
+}
+.link-style {
+  font-family: Poppins;
+  font-weight: 500;
+  line-height: 1.23;
+  color: #3384af;
+  &:hover {
+    color: #0f4968;
+    text-decoration: underline;
+    transition: all 0.2s ease-in-out;
+  }
+  @include mq("desktop-xwide") {
+    font-size: 28px;
+  }
+}
+.circle {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: -4.5px;
+    left: -15px;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background-color: #dea831;
+  }
+  @include mq("desktop-xwide") {
+    &::before {
+      top: -8px;
+      left: -23px;
+      width: 16px;
+      height: 16px;
+    }
+  }
+}
+.chart-line {
+  width: 81px;
+  height: 0px;
+  border-top: 1px dashed #1f94ae;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: -4.5px;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background-color: #1f94ae;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: -4.5px;
+    right: 0;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background-color: #1f94ae;
+  }
+  @include mq("desktop-xwide") {
+    width: 123px;
+    border-top: 2px dashed #1f94ae;
+    &::before,
+    &::after {
+      top: -8px;
+      width: 16px;
+      height: 16px;
+    }
+  }
+}

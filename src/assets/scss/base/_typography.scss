@@ -1,0 +1,26 @@
+/**
+ * Basic typography style for copy text
+ */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  margin: 0;
+}
+
+h1 {
+  @include heading1();
+  color: #3384af;
+}
+
+h2 {
+  @include heading2();
+}
+
+h3 {
+  @include heading3();
+}
+

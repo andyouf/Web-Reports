@@ -1,0 +1,87 @@
+// -----------------------------------------------------------------------------
+// This file contains very basic styles.
+// -----------------------------------------------------------------------------
+
+body {
+  margin: 0;
+  width: 100vw;
+  background-color: $white;
+  color: black;
+  overflow-x: hidden;
+  overflow-y: auto;
+  font-family: 'Poppins', 'Open Sans';
+  padding: 80px;
+  @include mq("desktop-xwide") {
+    padding: 264px 250px;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+*:focus {
+  outline: none;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0;
+  max-width: 1980px;
+}
+
+.col-md-4 {
+  padding: 0 20px;
+  @include mq("desktop-xwide") {
+    padding: 0 50px;
+  }
+}
+.col-lg-6 {
+  padding: 0 20px;
+  @include mq("desktop-xwide") {
+    padding: 0 40px;
+  }
+}
+
+a,
+button,
+.btn {
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+a {
+  font-family: 'Poppins';
+  color: #3384af;
+  text-decoration: underline;
+}
+button {
+  font-family: 'Open Sans';
+}
+img {
+  max-width: 100%;
+}
+
+ul {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+scroll {
+  width: 100vw;
+  height: 100vh;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Poppins';
+}
+p,
+span {
+  font-family: 'Open Sans';
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+}
