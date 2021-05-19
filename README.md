@@ -1,6 +1,4 @@
-# Getting Started with Atidot Web Reports
-
-This project was deployed at here. [Atidot Report App](https://atidot-weekly-report.netlify.app/).
+# Getting Started with Web Reports
 
 ## Available Scripts
 
